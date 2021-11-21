@@ -5,6 +5,14 @@
     margin: 0 auto;
 }
 
+/* メディアクエリ  */
+@media screen and (max-width: 600px) {
+    .container {
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
 /* へっだー */
 .topHeader {
     display: flex;
@@ -19,6 +27,51 @@
 .headerList li {
     margin-left: 40px;
 }
+
+.spHamburger {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .headerList {
+        display: none;
+    }
+
+    /* ハンバーガー */
+    .spHamburger {
+    display: block;
+    position: relative;/*ボタン内側の基点となるためrelativeを指定*/
+    background:#e6e6e6;
+    cursor: pointer;
+    width: 50px;
+    height:50px;
+    border-radius: 5px;
+    }
+
+    /*ボタン内側*/
+    .spHamburger span{
+        display: inline-block;
+        transition: all .4s;/*アニメーションの設定*/
+        position: absolute;
+        left: 14px;
+        height: 3px;
+        border-radius: 2px;
+        background: #fff;
+        width: 45%;
+    }
+
+    .spHamburger span:nth-of-type(1) {
+    top:15px; 
+    }
+
+    .spHamburger span:nth-of-type(2) {
+    top:23px;
+    }
+
+    .spHamburger span:nth-of-type(3) {
+    top:31px;
+    }
+  }
 
 /* ふぁーすとびゅー */
 .fv {
@@ -69,6 +122,7 @@
     width: 100%;
     font-size: 65px;
     white-space: nowrap;
+    overflow: hidden;
 }
 
 .catchCopy h2 {
@@ -89,8 +143,9 @@
     clear : both;
     display: flex;
     padding-top: 60px;
+    flex-direction: row-reverse;
+    float: S;
 }
-
 
 
 .styleList {
@@ -100,6 +155,7 @@
 .styleList__left {
     margin-right: 20px;
 }
+
 
 .styleList__left h3 {
     text-align: right;
@@ -134,6 +190,7 @@
 /* スクロール */
 .scroll {
     margin: 40px 0;
+    overflow: hidden;
 }
 
 .scroll:last-child {
@@ -167,6 +224,13 @@
     display: flex;
     justify-content: space-between;
     padding-bottom: 60px;
+}
+
+/* メディアクエリ  */
+@media screen and (max-width: 600px) {
+    .itemContents {
+        display: block;
+    }
 }
 
 /* メニュー */
@@ -232,5 +296,16 @@
 }
 .footerInfo li {
     list-style: none;
+}
+
+/* メディアクエリ  */
+@media screen and (max-width: 600px) { 
+    .footer {
+        display: block;
+    }
+
+    .footer img {
+        width: 100%;
+    }
 }
 
