@@ -13,7 +13,7 @@
         text-align: center;
     }
 }
-/* へっだー */
+/* ヘッダー */
 .topHeader {
     display: flex;
     justify-content: space-between;
@@ -73,7 +73,7 @@
     }
   }
 
-/* ふぁーすとびゅー */
+/* ファーストビュー */
 .fv {
     max-width: 100%;
     height: 90vh;
