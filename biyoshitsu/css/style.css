@@ -3,7 +3,7 @@
 /* メディアクエリ  */
 @media screen and (max-width: 600px) {
     .container {
-        width: 95%;
+        width: 90%;
         margin: 0 auto;
         text-align: center;
     }
@@ -100,41 +100,12 @@
     text-align: center;
 }
 
-.sentence {
-    width: 490px;
-    margin: 0 auto;
-}
-
 .firstContet p:last-child {
     letter-spacing: 2px;
     line-height: 1.5;
     font-size: 18px;
     margin-top: 20px;
 }
-
-
-@media screen and (max-width: 600px) {
-
-    .topTittle {
-        top: calc(50% - 50px);
-        left: calc(50% - 120px);
-    }
-
-    .topTittle h2,
-    .mainTittle h2 {
-        font-size: 60px;
-    }
-
-    .topTittle p,
-    .mainTittle p {
-        font-size: 28px;
-    }
-
-    .sentence {
-        width: auto;
-    }
-}
-
 
 /* スタイルメニュー */
 .style-bc {
@@ -206,7 +177,6 @@
     right:0;
 }
 
-
 .styleList__left h3::before {
     content:"";
     display:block;
@@ -225,38 +195,6 @@
     background-color:#333;
     position:absolute;
     bottom:0;
-=======
-/* メディアクエリ */
-@media screen and (max-width: 600px) {
-
-    .style-bc {
-        height: 1830px;
-    }
-
-    .r-styleList,
-    .l-styleList {
-        display: block;
-        clear: both;
-    }
-
-    .styleList__right img {
-        width: 100%;
-    }
-
-    .styleList__left h3 {
-        text-align: center;
-        font-size: 50px;
-    }
-
-    .styleList__left h3::before {
-        right: calc(50% - 57px);
-        width: 115px;
-    }
-
-    .styleList__left h3::after {
-        right: calc(50% - 57px);
-        width: 115px;
-    }
 }
 
 /* スクロール */
