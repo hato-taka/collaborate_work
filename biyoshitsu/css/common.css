@@ -1,0 +1,28 @@
+:root {
+    --main-bg-color: #e6e6e6;
+    --main-color: #666666;
+    --text-color: #333333;
+    --sub-color: #cccccc;
+}
+
+body {
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+body, img {
+    max-width: 100%;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+}
