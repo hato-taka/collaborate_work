@@ -227,13 +227,23 @@ body {
 @media screen and (max-width: 600px) {
 
     .style-bc {
-        height: 1830px;
+        height: 1930px;
     }
 
-    .r-styleList,
+    .r-styleList {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 55px;
+    }
+
     .l-styleList {
-        display: block;
-        clear: both;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .r-styleList p, .l-styleList p {
+        font-size: 1.2rem;
+        line-height: 1.8;
     }
 
     .styleList__right img {
@@ -307,6 +317,7 @@ body {
 @media screen and (max-width: 600px) {
     .itemContents {
         display: block;
+        padding-bottom: 60px;
     }
 
     .itemList {
@@ -388,6 +399,19 @@ body {
 .menuA a {
     border: 1px solid #333;
     padding: 10px 80px;
+}
+
+@media screen and (max-width: 600px) {
+    .menusLists {
+        flex-direction: column;
+        
+    }
+
+    .memuList__left,
+    .memuList__right {
+        width: 80%;
+        margin: 0 auto;
+    }
 }
 
 /* ニュース */
@@ -497,7 +521,7 @@ body {
 @media screen and (max-width: 600px) {
     .footerInfo {
         position: relative;
-        padding: 3rem;
+        padding-bottom: 220px;
     }
 
     .footerImg {
