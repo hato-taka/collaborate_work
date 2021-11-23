@@ -70,7 +70,7 @@
 
   /* スタイルメニュー */
   .style-bc {
-    height: 1930px;
+    height: 2300px;
   }
 
   .r-styleList {
@@ -132,8 +132,14 @@
     display: block;
   }
 
-  .sp-item {
+  .sp-item{
     width: 90%;
+    margin: 0 auto;
+  }
+
+  .itemList img.sp-item {
+    width: 90%;
+    height: auto;
     margin: 0 auto;
   }
 
