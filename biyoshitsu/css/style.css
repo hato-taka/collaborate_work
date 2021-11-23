@@ -8,6 +8,13 @@
     justify-content: space-between;
 }
 
+.headerFixed {
+    position: fixed;
+    width: 100vw;
+    /* display: flex;
+    justify-content: space-between; */
+}
+
 .headerList ul {
     display: flex;
     line-height: 3;
