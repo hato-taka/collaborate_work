@@ -13,6 +13,10 @@ body, img {
     max-width: 100%;
 }
 
+img {
+    object-fit: cover;
+}
+
 ul, li {
     list-style: none;
 }

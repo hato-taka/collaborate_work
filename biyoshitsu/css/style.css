@@ -83,14 +83,14 @@ body {
 /* ファーストビュー */
 .fv {
     max-width: 100%;
-    height: 90vh;
-    background-image: url(https://placehold.jp/2000x700.png);
+    height: 100vh;
+    background-image: url(../images/first-view.png);
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
 }
 
-.topTittle {
+.topTitle {
     text-align: center;
     position: absolute;
     display: inline-block;
@@ -98,13 +98,13 @@ body {
     left: calc(50% - 180px);
 }
 
-.topTittle p,
-.mainTittle p {
+.topTitle p,
+.mainTitle p {
     font-size: 40px;
 }
 
-.topTittle h2,
-.mainTittle h2 {
+.topTitle h2,
+.mainTitle h2 {
     font-size: 90px;
 }
 
@@ -128,18 +128,18 @@ body {
 
 @media screen and (max-width: 600px) {
 
-    .topTittle {
+    .topTitle {
         top: calc(50% - 50px);
         left: calc(50% - 120px);
     }
 
-    .topTittle h2,
-    .mainTittle h2 {
+    .topTitle h2,
+    .mainTitle h2 {
         font-size: 60px;
     }
 
-    .topTittle p,
-    .mainTittle p {
+    .topTitle p,
+    .mainTitle p {
         font-size: 28px;
     }
 
@@ -221,6 +221,16 @@ body {
     position: absolute;
     bottom: 0;
     right: 0;
+}
+
+.styleList__right img {
+    width: 500px;
+    height: 300px;
+}
+
+.footerImg img {
+    width: 450px;
+    height: 280px;
 }
 
 /* メディアクエリ */
@@ -311,6 +321,11 @@ body {
 
 .sp-item {
     display: none;
+}
+
+.itemList img {
+    width: 150px;
+    height: 450px;
 }
 
 /* メディアクエリ  */
