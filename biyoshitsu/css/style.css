@@ -11,6 +11,8 @@
 .headerFixed {
     position: fixed;
     width: 100vw;
+    z-index: 100;
+    background-color: var(--white);
     /* display: flex;
     justify-content: space-between; */
 }
@@ -36,24 +38,32 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    top: -45px;
 }
 
 .topTitle {
     text-align: center;
-    position: absolute;
+    /* position: absolute; */
+    position: sticky;
+    z-index: 200;
     display: inline-block;
     top: calc(50% - 74px);
-    left: calc(50% - 180px);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.mainTitle {
+    height: 2em;
 }
 
 .topTitle p,
 .mainTitle p {
-    font-size: 40px;
+    font-size: 32px;
 }
 
 .topTitle h2,
 .mainTitle h2 {
-    font-size: 90px;
+    font-size: 50px;
 }
 
 /* ファーストコンテンツ */
@@ -89,10 +99,31 @@
 
 .catchCopy h2 {
     padding-top: 20px;
+    animation: catchCopy 10s infinite linear;
+}
+
+@keyframes catchCopy {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-117vw);
+    }
 }
 
 .styleMenu {
     margin-bottom: 10px;
+}
+
+.r-styleList,
+.l-styleList {
+    transform: rotate3d(1,1,0,90deg);
+    transition: 0.5s;
+}
+
+.r-styleList.active,
+.l-styleList.active {
+    transform: none;
 }
 
 .r-styleList {
@@ -100,6 +131,7 @@
     float: right;
     margin-top: 60px;
 }
+
 
 .l-styleList {
     clear: both;
@@ -170,15 +202,49 @@
     margin-bottom: 60px;
 }
 
+@keyframes sliderLeft {
+    0% {
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-151.5%);
+    }
+}
+
+@keyframes sliderRight {
+    0% {
+        transform: translateX(-151.5%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
 .scroll ul {
     position: relative;
     white-space: nowrap;
-    transform: translate3d(0, 0, 0);
+    /* transform: translate3d(0, 0, 0); */
+}
+
+.scroll ul.left {
+    animation: sliderLeft 30s infinite linear;
+}
+
+.scroll ul.right {
+    /* animation: sliderRight 30s infinite linear; */
+        transform: translateX(-151.5%);
 }
 
 .scroll li {
     display: inline-block;
     padding: 0 10px;
+    width: 250px;
+}
+
+.scroll li img {
+    display: block;
+    margin: auto;
+    height: 170px;
 }
 
 /* 縦長アイテム */
@@ -208,7 +274,7 @@
 }
 
 .itemList img {
-    width: 150px;
+    width: 200px;
     height: 450px;
 }
 
@@ -286,6 +352,17 @@
 
 .newsList {
     width: 30%;
+}
+
+.newsList {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.5s;
+}
+
+.newsList.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .newsList h4 {
