@@ -50,6 +50,7 @@
     /* position: absolute; */
     position: sticky;
     z-index: 99;
+
     display: inline-block;
     top: calc(50% - 74px);
     left: 50%;
@@ -110,7 +111,6 @@
     0% {
         transform: translateX(0);
     }
-
     100% {
         transform: translateX(-117vw);
     }
@@ -123,6 +123,7 @@
 .r-styleList,
 .l-styleList {
     transform: rotate3d(1, 1, 0, 90deg);
+
     transition: 0.5s;
 }
 
@@ -212,6 +213,7 @@
         transform: translateX(0%);
     }
 
+
     100% {
         transform: translateX(-151.5%);
     }
@@ -240,6 +242,7 @@
 .scroll ul.right {
     /* animation: sliderRight 30s infinite linear; */
     transform: translateX(-151.5%);
+
 }
 
 .scroll li {
