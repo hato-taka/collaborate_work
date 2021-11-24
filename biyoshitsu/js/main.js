@@ -1,3 +1,4 @@
+
 'use strict'; {
     // intersection obsever API start
     const targets = document.querySelectorAll('.target');
