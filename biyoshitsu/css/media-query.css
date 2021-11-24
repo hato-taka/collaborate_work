@@ -103,7 +103,7 @@
 
   .topTitle h2,
   .mainTitle h2 {
-    font-size: 60px;
+    font-size: 32px;
   }
 
   .topTitle p,
@@ -118,6 +118,7 @@
   /* スタイルメニュー */
   .style-bc {
     height: 2300px;
+    overflow: hidden;
   }
 
   .r-styleList {
@@ -139,6 +140,7 @@
 
   .styleList__right img {
     width: 100%;
+    height: auto;
   }
 
   .styleList__left h3 {
@@ -181,7 +183,8 @@
     display: none;
   }
 
-  .sp-item {
+  .sp-item,
+  .sp-menu {
     display: block;
   }
 
@@ -192,7 +195,7 @@
 
   .itemList img.sp-item {
     width: 90%;
-    height: auto;
+    height: 150px;
     margin: 0 auto;
   }
 
