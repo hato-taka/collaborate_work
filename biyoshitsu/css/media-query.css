@@ -1,4 +1,21 @@
 /* メディアクエリ  */
+
+/* タブレット用 */
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 98%;
+    margin: 0 auto;
+  }
+
+  .topTitle {
+    left: calc(50% - 300px);
+    transform: none;
+  }
+
+}
+
+
+/* スマホ用 */
 @media screen and (max-width: 600px) {
   .container {
     width: 95%;
