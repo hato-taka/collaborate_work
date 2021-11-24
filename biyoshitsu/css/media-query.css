@@ -97,6 +97,8 @@
   .topTitle {
     top: calc(50% - 50px);
     left: calc(50% - 120px);
+    transform: none;
+
   }
 
   .topTitle h2,
@@ -154,6 +156,12 @@
     width: 115px;
   }
 
+  /* 背景文字 */
+  .styleMenu-back {
+    font-size: 40px;
+    letter-spacing: 13px;
+  }
+
   /* 縦長アイテム */
   .itemContents {
     display: block;
@@ -206,6 +214,7 @@
 
   .newsList {
     width: 100%;
+
     margin-bottom: 50px;
   }
 
@@ -217,6 +226,7 @@
   .newsList img {
     width: 100%;
   }
+
 
   .snsLink {
     display: block;
