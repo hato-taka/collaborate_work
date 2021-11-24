@@ -9,43 +9,88 @@
   /* ヘッダー */
   .headerList {
     display: none;
+    z-index: 5;
   }
 
   /* ハンバーガー */
-  .spHamburger {
+  .sp-menu {
+    display: block;
+    margin-right: 5px;
+}
+
+.nav_toggle {
     display: block;
     position: relative;
-    /*ボタン内側の基点となるためrelativeを指定*/
-    background: #e6e6e6;
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-    border-radius: 5px;
+    width: 1.75rem;
+    height: 1.5rem;
+    z-index: 260;
+    margin-top: 10px;
   }
-
-  /*ボタン内側*/
-  .spHamburger span {
-    display: inline-block;
-    transition: all 0.4s;
-    /*アニメーションの設定*/
+  .nav_toggle i {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
     position: absolute;
-    left: 14px;
-    height: 3px;
-    border-radius: 2px;
-    background: #fff;
-    width: 45%;
+    transition: transform .5s, opacity .5s;
+  }
+  .nav_toggle i:nth-child(1) {
+    top: 0;
+  }
+  .nav_toggle i:nth-child(2) {
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  .nav_toggle i:nth-child(3) {
+    bottom: 0;
   }
 
-  .spHamburger span:nth-of-type(1) {
-    top: 15px;
+  .nav_toggle.show i:nth-child(1) {
+    transform: translateY(10px) rotate(-45deg);
+  }
+  .nav_toggle.show i:nth-child(2) {
+    opacity: 0;
+  }
+  .nav_toggle.show i:nth-child(3) {
+    transform: translateY(-12px) rotate(45deg);
   }
 
-  .spHamburger span:nth-of-type(2) {
-    top: 23px;
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s, visibility .5s;
   }
 
-  .spHamburger span:nth-of-type(3) {
-    top: 31px;
+  .nav.show {
+    opacity: 1;
+    z-index: 250;
+    visibility: visible;
+    background-color: #fff;
+    width: 100%;
+    margin-left: auto;
+  }
+
+  .nav_menu_li {
+      margin: 50px auto 0 auto;
+      border-bottom: 1px solid #D2D2D2;
+      width: 75%;
+
+  }
+
+  .nav_menu_li a::after {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 2px;
+    background: #2D7638;
+    margin: 7px auto;
   }
 
   /* ファーストコンテンツ */
@@ -161,11 +206,31 @@
 
   .newsList {
     width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .newsList,
+  .newsData {
+    text-align: left;
   }
 
   .newsList img {
     width: 100%;
   }
+
+  .snsLink {
+    display: block;
+  }
+
+  .insta,
+  .blog {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+.blog {
+  margin: 30px auto;
+}
 
   /* フッター  */
   .footerInfo {
