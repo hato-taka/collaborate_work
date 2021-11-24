@@ -12,10 +12,15 @@
 .headerFixed {
     position: fixed;
     width: 100vw;
-    z-index: 100;
+    z-index: 300;
     background-color: var(--white);
     /* display: flex;
     justify-content: space-between; */
+}
+
+.headerLogo img {
+    padding: 0 50px;
+    height: 50px;
 }
 
 .headerList ul {
@@ -189,9 +194,21 @@
     right: 0;
 }
 
+.styleList__right {
+    position: relative;
+}
+
 .styleList__right img {
     width: 500px;
     height: 300px;
+}
+
+.styleList__right img.decorationFont {
+    position: absolute;
+    width: 200px;
+    height: auto;
+    bottom: -20px;
+    right: -10px;
 }
 
 .footerImg img {
@@ -278,7 +295,8 @@
     display: block;
 }
 
-.sp-item {
+.sp-item,
+.sp-menu {
     display: none;
 }
 
@@ -297,11 +315,11 @@
     height: 100%;
     background-color: var(--black);
     transition: 0.5s;
-    transform: translateX(0px);
+    transform: translateX(1px);
 }
 
 .itemList.active::before {
-    transform: translateX(200px);
+    transform: translateX(375px);
 }
 
 .itemList img {
