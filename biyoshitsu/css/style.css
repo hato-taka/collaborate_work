@@ -47,6 +47,7 @@
     background-image: url(../images/first-view.png);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     position: relative;
     top: -45px;
 }
