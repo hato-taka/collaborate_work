@@ -97,6 +97,8 @@
   .topTitle {
     top: calc(50% - 50px);
     left: calc(50% - 120px);
+    transform: none;
+
   }
 
   .topTitle h2,
@@ -206,6 +208,7 @@
 
   .newsList {
     width: 100%;
+
     margin-bottom: 50px;
   }
 
@@ -217,6 +220,7 @@
   .newsList img {
     width: 100%;
   }
+
 
   .snsLink {
     display: block;
