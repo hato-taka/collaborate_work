@@ -1,11 +1,27 @@
 :root {
-    --main-bg-color: #e6e6e6;
+    /* モノクロ */
+    /* --main-bg-color: #e6e6e6;
     --main-color: #666666;
     --text-color: #333333;
     --sub-color: #cccccc;
     --white: #fefefe;
-    --black: #333
+    --black: #333; */
 
+    /* ピンク系 */
+    /* --main-bg-color: #ffdbed;
+    --main-color: #ff7fbf;
+    --text-color: #804060;
+    --sub-color: #ffa8d3;
+    --white: #fefefe;
+    --black: #333; */
+
+    /* 黄色系 */
+    --main-bg-color: #ffead6;
+    --main-color: #ffc489;
+    --text-color: #806142;
+    --sub-color: #ffdbb7;
+    --white: #fefefe;
+    --black: #333;
 }
 
 body {
