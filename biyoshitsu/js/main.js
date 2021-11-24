@@ -53,9 +53,31 @@
     });
     // inter section observer API end
 
-    // ハンバーガー
-    $('.nav_toggle').on('click', function () {
+// ハンバーガー
+$('.nav_toggle').on('click', function () {
     $('.nav_toggle, .nav').toggleClass('show');
+  });
+
+  function fadeAnime(){
+    $('.fadeInTrigger').each(function(){ 
+      var elemPos = $(this).offset().top-50;
+      var scroll = $(window).scrollTop();
+      var windowHeight = $(window).height();
+      if (scroll >= elemPos - windowHeight){
+      $(this).addClass('fadeIn');
+      }else{
+      $(this).removeClass('fadeIn');
+      }
+    });
+  }
+  // スクロールをしたら動く
+  $(window).scroll(function (){
+    fadeAnime();
+  });
+  
+  // 画面が読み込まれたら動く
+  $(window).on('load', function(){
+    fadeAnime();
   });
 
 }

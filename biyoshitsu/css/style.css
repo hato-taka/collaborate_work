@@ -32,6 +32,9 @@
     margin-left: 40px;
 }
 
+.sp-menu {
+    display: none;
+}
 .spHamburger {
     display: none;
 }
@@ -125,6 +128,43 @@
 
 .styleMenu {
     margin-bottom: 10px;
+    position: relative;
+}
+
+/* 背景文字 */
+
+.fadeIn{
+    animation-name: fadeInAnime;
+    animation-duration:3s;
+    animation-fill-mode:forwards;
+    opacity:0;
+    }
+    
+    @keyframes fadeInAnime{
+      from {
+        opacity: 0;
+      }
+    
+      to {
+        opacity: 1;
+      }
+    }
+    
+    /* スクロールをしたら出現する要素にはじめに透過0を指定　*/
+    
+    .fadeInTrigger{
+        opacity: 0;
+    }
+    
+
+.styleMenu-back {
+    position: absolute;
+    color: #fff;
+    right: 0;
+    top: 10px;
+    font-size: 4rem;
+    letter-spacing: 50px;
+font-family: 'Homemade Apple', cursive;
 }
 
 .r-styleList,
@@ -141,7 +181,8 @@
 .r-styleList {
     display: flex;
     float: right;
-    margin-top: 60px;
+    margin-top: 70px;
+    position: relative;
 }
 
 
@@ -152,7 +193,6 @@
     flex-direction: row-reverse;
     float: left;
 }
-
 
 .styleList {
     margin-top: 60px;

@@ -158,6 +158,12 @@
     width: 115px;
   }
 
+  /* 背景文字 */
+  .styleMenu-back {
+    font-size: 40px;
+    letter-spacing: 13px;
+  }
+
   /* 縦長アイテム */
   .itemContents {
     display: block;
