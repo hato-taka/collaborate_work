@@ -4,6 +4,7 @@
 
     console.log(targets);
 
+    let intervalId;
 
     function callback(entries, obs) {
         entries.forEach((entry, index) => {
@@ -16,7 +17,7 @@
             if (item.classList.contains('newsContents')) {
                 let news = item.querySelectorAll('.newsList');
                 news.forEach((value,index) => {
-                    setInterval(()=> {
+                    intervalId = setInterval(()=> {
                         value.classList.add('active');
                     }, index * 100)
                 })
@@ -26,12 +27,21 @@
                 item.classList.add('active');
             }
 
+            if(item.classList.contains('itemContents')) {
+                let itemList = item.querySelectorAll('.itemList');
+                itemList.forEach((value, index) => {
+                    setInterval(()=> {
+                        value.classList.add('active');
+                    }, index * 300)
+                })
+            }
+
             obs.unobserve(item);
         })
     }
 
     const options = {
-        threshold: 0.3,
+        threshold: 0.5,
         rootMargin: '0px 0px -50px'
     }
 
@@ -43,17 +53,5 @@
     // inter section observer API end
 
 
-    const topTitle = document.querySelector('.topTitle');
-    
-    let top = 100; //初期値
 
-    function calcTop() {
-        if(top <= 470 && top > 0) {
-            console.log(scrollY);
-            top = 100 + scrollY ;
-            topTitle.style.top = top + 'px';
-        } 
-    }
-
-    // document.addEventListener('scroll',calcTop);
 }

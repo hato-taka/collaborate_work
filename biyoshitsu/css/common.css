@@ -4,6 +4,7 @@
     --text-color: #333333;
     --sub-color: #cccccc;
     --white: #fefefe;
+    --black: #333
 }
 
 body {
@@ -32,6 +33,16 @@ a {
 .container {
     max-width: 1024px;
     margin: 0 auto;
+}
+
+/* 枠線文字 */
+.border-font {
+    text-shadow: #3b3b3b 1px 1px 0, #3b3b3b -1px 1px 0, #3b3b3b 1px -1px 0, #3b3b3b -1px -1px 0;
+}
+
+/* 明朝体文字 */
+.serif {
+    font-family: "Playfair Display",serif;
 }
 
 /* aタグ　ホバー */
