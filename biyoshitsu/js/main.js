@@ -17,21 +17,21 @@
 
             if (item.classList.contains('newsContents')) {
                 let news = item.querySelectorAll('.newsList');
-                news.forEach((value,index) => {
-                    intervalId = setInterval(()=> {
+                news.forEach((value, index) => {
+                    intervalId = setInterval(() => {
                         value.classList.add('active');
                     }, index * 100)
                 })
             }
 
-            if(item.classList.contains('r-styleList') || item.classList.contains('l-styleList')) {
+            if (item.classList.contains('r-styleList') || item.classList.contains('l-styleList')) {
                 item.classList.add('active');
             }
 
-            if(item.classList.contains('itemContents')) {
+            if (item.classList.contains('itemContents')) {
                 let itemList = item.querySelectorAll('.itemList');
                 itemList.forEach((value, index) => {
-                    setInterval(()=> {
+                    setInterval(() => {
                         value.classList.add('active');
                     }, index * 300)
                 })
@@ -53,31 +53,61 @@
     });
     // inter section observer API end
 
-// ハンバーガー
-$('.nav_toggle').on('click', function () {
-    $('.nav_toggle, .nav').toggleClass('show');
-  });
+    // cahnge backgroundcolor
+    const root = document.querySelector(':root');
+    const colorSet = {
+        black : {
+            mainColor : '#666666',
+            bgColor : '#e6e6e6',
+            textColor: '#333333',
+            subColor: '#cccccc'
+        },
+        pink : {
+            mainColor : '#ff7fbf',
+            bgColor : '#ffdbed',
+            textColor: '#804060',
+            subColor: '#ffa8d3'
+        },
+        yellow: {
+            mainColor : '#ffc489',
+            bgColor : '#ffead6',
+            textColor: '#806142',
+            subColor: '#ffdbb7'
+        }
+    }
 
-  function fadeAnime(){
-    $('.fadeInTrigger').each(function(){ 
-      var elemPos = $(this).offset().top-50;
-      var scroll = $(window).scrollTop();
-      var windowHeight = $(window).height();
-      if (scroll >= elemPos - windowHeight){
-      $(this).addClass('fadeIn');
-      }else{
-      $(this).removeClass('fadeIn');
-      }
+    root.style.setProperty('--main-color', colorSet.black.mainColor);
+    root.style.setProperty('--main-bg-color', colorSet.black.bgColor);
+    root.style.setProperty('--text-color', colorSet.black.textColor);
+    root.style.setProperty('--sub-color', colorSet.black.subColor);
+
+    // end change bgc
+
+    // ハンバーガー
+    $('.nav_toggle').on('click', function () {
+        $('.nav_toggle, .nav').toggleClass('show');
     });
-  }
-  // スクロールをしたら動く
-  $(window).scroll(function (){
-    fadeAnime();
-  });
-  
-  // 画面が読み込まれたら動く
-  $(window).on('load', function(){
-    fadeAnime();
-  });
+
+    function fadeAnime() {
+        $('.fadeInTrigger').each(function () {
+            var elemPos = $(this).offset().top - 50;
+            var scroll = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            if (scroll >= elemPos - windowHeight) {
+                $(this).addClass('fadeIn');
+            } else {
+                $(this).removeClass('fadeIn');
+            }
+        });
+    }
+    // スクロールをしたら動く
+    $(window).scroll(function () {
+        fadeAnime();
+    });
+
+    // 画面が読み込まれたら動く
+    $(window).on('load', function () {
+        fadeAnime();
+    });
 
 }
