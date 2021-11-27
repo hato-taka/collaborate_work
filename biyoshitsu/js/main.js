@@ -20,9 +20,10 @@
                 news.forEach((value, index) => {
                     intervalId = setInterval(() => {
                         value.classList.add('active');
-                    }, index * 100)
+                    }, index * 100);
                 })
             }
+
 
             if (item.classList.contains('r-styleList') || item.classList.contains('l-styleList')) {
                 item.classList.add('active');
@@ -55,6 +56,9 @@
 
     // cahnge backgroundcolor
     const root = document.querySelector(':root');
+    const black = document.getElementById('black');
+    const pink = document.getElementById('pink');
+    const yellow = document.getElementById('yellow');
     const colorSet = {
         black : {
             mainColor : '#666666',
@@ -76,10 +80,26 @@
         }
     }
 
-    root.style.setProperty('--main-color', colorSet.black.mainColor);
-    root.style.setProperty('--main-bg-color', colorSet.black.bgColor);
-    root.style.setProperty('--text-color', colorSet.black.textColor);
-    root.style.setProperty('--sub-color', colorSet.black.subColor);
+    black.addEventListener('click', ()=> {
+        root.style.setProperty('--main-color', colorSet.black.mainColor);
+        root.style.setProperty('--main-bg-color', colorSet.black.bgColor);
+        root.style.setProperty('--text-color', colorSet.black.textColor);
+        root.style.setProperty('--sub-color', colorSet.black.subColor);
+    });
+
+    pink.addEventListener('click', ()=> {
+        root.style.setProperty('--main-color', colorSet.pink.mainColor);
+        root.style.setProperty('--main-bg-color', colorSet.pink.bgColor);
+        root.style.setProperty('--text-color', colorSet.pink.textColor);
+        root.style.setProperty('--sub-color', colorSet.pink.subColor);
+    });
+
+    yellow.addEventListener('click', ()=> {
+        root.style.setProperty('--main-color', colorSet.yellow.mainColor);
+        root.style.setProperty('--main-bg-color', colorSet.yellow.bgColor);
+        root.style.setProperty('--text-color', colorSet.yellow.textColor);
+        root.style.setProperty('--sub-color', colorSet.yellow.subColor);
+    });
 
     // end change bgc
 

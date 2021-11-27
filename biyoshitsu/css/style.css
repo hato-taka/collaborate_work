@@ -9,6 +9,28 @@
     justify-content: space-between;
 }
 
+.colorSet ul {
+    display: flex;
+}
+
+.colorSet ul li {
+    color: var(--black);
+    cursor: pointer;
+    padding: 10px;
+}
+
+#black {
+    background-color: #e6e6e6;
+}
+
+#pink {
+    background-color: #ffdbed;
+}
+
+#yellow {
+    background-color: #ffead6;
+}
+
 .headerFixed {
     position: fixed;
     width: 100vw;

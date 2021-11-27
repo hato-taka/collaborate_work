@@ -24,6 +24,10 @@
     --black: #333;
 }
 
+* {
+    transition: .5s;
+}
+
 body {
     font-family: Verdana, Geneva, sans-serif;
     text-align: justify;
