@@ -296,13 +296,13 @@ font-family: 'Homemade Apple', cursive;
         transform: translateX(0%);
     }
     100%{
-        transform: translateX(-51.5%);
+        transform: translateX(-2301px);
     }
 }
 
 @keyframes sliderRight {
     0% {
-        transform: translateX(-51.5%);
+        transform: translateX(-2301px);
     }
     100%{
         transform: translateX(0%);
@@ -312,7 +312,6 @@ font-family: 'Homemade Apple', cursive;
 .scroll ul {
     position: relative;
     white-space: nowrap;
-    /* transform: translate3d(0, 0, 0); */
 }
 
 .scroll ul.left {
